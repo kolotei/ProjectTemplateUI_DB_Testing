@@ -4,13 +4,17 @@ import com.library.utility.DB_Util;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.apache.commons.codec.StringEncoder;
 import org.junit.Assert;
 
 import java.sql.SQLOutput;
+import java.util.List;
 
 public class UserStepDefs {
 
     String actualUserCount;
+    List <String> actualColumnNames;
+
     @Given("Establish the database connection")
     public void establish_the_database_connection() {
         // Make a conn with library
@@ -24,7 +28,6 @@ public class UserStepDefs {
     public void execute_query_to_get_all_i_ds_from_users() {
         String query="select count(id) from users";
         DB_Util.runQuery(query);
-
         actualUserCount = DB_Util.getFirstRowFirstColumn();
         System.out.println(actualUserCount);
     }
@@ -44,4 +47,18 @@ public class UserStepDefs {
         System.out.println("--- CONNECTION WILL BE CLOSED WITH AFTER HOOK -----");
         System.out.println("--------------------------------------------------");
     }
+
+    @When("Execute query to get all columns")
+    public void execute_query_to_get_all_columns() {
+        String query = "select * from users";
+        DB_Util.runQuery(query);
+        actualColumnNames = DB_Util.getAllColumnNamesAsList();
+        System.out.println("actualColumnNames = " + actualColumnNames);
+    }
+    @Then("verify the below columns are listed in result")
+    public void verify_the_below_columns_are_listed_in_result(List<String> expectedColumnNames) {
+        System.out.println("expectedColumnNames = " + expectedColumnNames);
+        Assert.assertEquals(expectedColumnNames, actualColumnNames);
+    }
+
 }
