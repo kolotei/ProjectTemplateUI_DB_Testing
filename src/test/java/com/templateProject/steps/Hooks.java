@@ -1,15 +1,13 @@
-package com.library.steps;
+package com.templateProject.steps;
 
-import com.library.utility.ConfigurationReader;
-import com.library.utility.DB_Util;
-import com.library.utility.Driver;
+import com.templateProject.utility.ConfigurationReader;
+import com.templateProject.utility.DB_Util;
+import com.templateProject.utility.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-
-import java.util.concurrent.TimeUnit;
 
 public class Hooks {
 
@@ -47,8 +45,4 @@ public class Hooks {
         System.out.println("closing connection....");
 
     }
-
-
-
-
 }

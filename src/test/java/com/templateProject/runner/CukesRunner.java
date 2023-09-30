@@ -1,4 +1,4 @@
-package com.library.runner;
+package com.templateProject.runner;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
                 "me.jvt.cucumber.report.PrettyReports:target/cucumber"
         },
         features = "src/test/resources/features",
-        glue = "com/library/steps",
+        glue = "com/templateProject/steps",
         dryRun = false,
         tags = "@wip"
 )

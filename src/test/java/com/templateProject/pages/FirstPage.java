@@ -1,13 +1,13 @@
-package com.library.pages;
+package com.templateProject.pages;
 
-import com.library.utility.Driver;
+import com.templateProject.utility.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class BookPage extends BasePage {
+public class FirstPage extends BasePage {
 
     @FindBy(xpath = "//table/tbody/tr")
     public List<WebElement> allRows;

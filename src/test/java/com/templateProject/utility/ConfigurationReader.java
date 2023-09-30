@@ -1,4 +1,4 @@
-package com.library.utility;
+package com.templateProject.utility;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -14,7 +14,6 @@ public class ConfigurationReader {
 
     // having static block because static runs first
       static {
-
           try {
               // Create FileInputStream object to open file as a stream in Java memory
               FileInputStream file = new FileInputStream("config.properties");
@@ -30,6 +29,5 @@ public class ConfigurationReader {
       public static String getProperty(String keyword) {
           return properties.getProperty(keyword);
       }
-
 
 }

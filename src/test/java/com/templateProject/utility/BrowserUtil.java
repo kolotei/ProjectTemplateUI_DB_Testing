@@ -1,4 +1,4 @@
-package com.library.utility;
+package com.templateProject.utility;
 
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -162,7 +162,6 @@ public class BrowserUtil {
         } catch (NoSuchElementException e) {
             e.printStackTrace();
             Assert.fail("Element not found: " + by);
-
         }
     }
 

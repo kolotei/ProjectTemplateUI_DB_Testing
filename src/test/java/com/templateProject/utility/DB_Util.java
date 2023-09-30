@@ -1,4 +1,4 @@
-package com.library.utility;
+package com.templateProject.utility;
 
 import java.sql.*;
 import java.util.ArrayList;
