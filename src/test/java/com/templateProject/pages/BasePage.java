@@ -18,21 +18,9 @@ public abstract  class BasePage {
     }
 
 
-    @FindBy(tagName = "h3")
-    public WebElement pageHeader;
+    @FindBy(linkText = "Contact Us")
+    public WebElement contactUs;
 
-    @FindBy(css = "#navbarDropdown>span")
-    public WebElement accountHolderName;
 
-    @FindBy(linkText = "Log Out")
-    public WebElement logOutLink;
 
-    public void logOut(){
-        accountHolderName.click();
-        logOutLink.click();
-    }
-
-    public void navigateModule(String moduleName){
-        Driver.getDriver().findElement(By.xpath("//span[@class='title'][.='"+moduleName+"']")).click();
-    }
 }
