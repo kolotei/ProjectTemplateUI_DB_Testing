@@ -9,56 +9,33 @@ import java.util.List;
 
 public class FirstPage extends BasePage {
 
-    @FindBy(xpath = "//table/tbody/tr")
-    public List<WebElement> allRows;
+    @FindBy(xpath = "//*[@id=\"layout--sidecar\"]/div/div/div/div/p/a")
+    public WebElement emailBtnƒ;
 
-    @FindBy(xpath = "//input[@type='search']")
-    public WebElement search;
+    @FindBy(xpath = "//input[@id='urlInput']")
+    public WebElement pageUrl;
 
-    @FindBy(id = "book_categories")
-    public WebElement mainCategoryElement;
+    @FindBy(xpath = "//textarea[@name='feedback']")
+    public WebElement yourMessage;
 
-    @FindBy(name = "name")
-    public WebElement bookName;
+    @FindBy(xpath = "//input[@id='firstNameInput']")
+    public WebElement firstName;
 
+    @FindBy(xpath = "//input[@id='lastNameInput']")
+    public WebElement lastName;
+    @FindBy (xpath ="//input[@id=\'emailInput\']")
+    public WebElement email;
 
-    @FindBy(xpath = "(//input[@type='text'])[4]")
-    public WebElement author;
+    @FindBy(xpath = "//input[@id='phoneInput']")
+    public WebElement phone;
 
-    @FindBy(xpath = "//div[@class='portlet-title']//a")
-    public WebElement addBook;
+    @FindBy(xpath = "//div[@class='recaptcha-checkbox-border']")
+    public WebElement checkBox;
 
-    @FindBy(xpath = "//button[@type='submit']")
-    public WebElement saveChanges;
-
-    @FindBy(xpath = "//div[@class='toast-message']")
-    public WebElement toastMessage;
-
-    @FindBy(name = "year")
-    public WebElement year;
-
-    @FindBy(name = "isbn")
-    public WebElement isbn;
-
-    @FindBy(id = "book_group_id")
-    public WebElement categoryDropdown;
+    @FindBy(xpath = "//span[@class='mat-button-wrapper']")
+    public WebElement sendBtn;
 
 
-
-    @FindBy(id = "description")
-    public WebElement description;
-
-
-
-    public WebElement editBook(String book) {
-        String xpath = "//td[3][.='" + book + "']/../td/a";
-        return Driver.getDriver().findElement(By.xpath(xpath));
-    }
-
-    public WebElement borrowBook(String book) {
-        String xpath = "//td[3][.='" + book + "']/../td/a";
-        return Driver.getDriver().findElement(By.xpath(xpath));
-    }
 
 
 

@@ -14,7 +14,7 @@ public class Hooks {
     @Before("@ui")
     public void setUp(){
         System.out.println("this is coming from BEFORE");
-        Driver.getDriver().get(ConfigurationReader.getProperty("library_url"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("url"));
 
     }
 
