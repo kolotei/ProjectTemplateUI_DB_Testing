@@ -10,8 +10,6 @@ import org.openqa.selenium.support.ui.Wait;
 
 public class UserStepDefs {
 
-
-
     FirstPage  firstPage= new FirstPage();
     @Given("user click on CONTACT US module")
     public void user_click_on_contact_us_module() {
