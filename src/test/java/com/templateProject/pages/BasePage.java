@@ -18,9 +18,7 @@ public abstract  class BasePage {
     }
 
 
-    @FindBy(linkText = "Contact Us")
+    @FindBy(xpath = "//ul[@block='block-finrautilitymenu']//a[@class='nav-link'][normalize-space()='Contact Us']")
     public WebElement contactUs;
-
-
 
 }
