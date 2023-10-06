@@ -66,12 +66,14 @@
             <version>1.0.2</version>
         </dependency>
 
+
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.2.3</version>
+            <version>7.14.0</version>
         </dependency>
+
 
 
         <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-junit -->
@@ -82,11 +84,13 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/me.jvt.cucumber/reporting-plugin -->
         <dependency>
             <groupId>me.jvt.cucumber</groupId>
             <artifactId>reporting-plugin</artifactId>
-            <version>7.2.0</version>
+            <version>7.11.0</version>
         </dependency>
+
 
         <dependency>
             <groupId>mysql</groupId>
